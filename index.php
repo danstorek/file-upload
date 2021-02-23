@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Upload souboru</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
 <h2>Na server lze vkládat pouze soubory s příponami .jpg, .jpeg, .png, .mp4, .mp3</h2>
@@ -73,9 +74,9 @@ if ($_FILES) {
 }
 
 ?>
-<form method='post' action='' enctype='multipart/form-data'><div>
-        Vyber soubor:
-        <input type="file" name="uploadedName" accept=".jpg,.png,.jpeg,.mp4,.mp3"/>
+<form method='post' action='' enctype='multipart/form-data'><div class="mb-3">
+        <label for="formFile" class="form-label">Vyber soubor:</label>
+        <input class="form-control" name="uploadedName" type="file" id="formFile" accept=".jpg,.png,.jpeg,.mp4,.mp3"></br>
         <input type="submit" value="Nahrát" name="submit" />
     </div></form>
 </body>
